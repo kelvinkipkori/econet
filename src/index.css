@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 13% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
+
+    --primary: 207 90% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 220 13% 18%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 145 63% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 207 90% 35%;
+
+    --radius: 0.5rem;
+
+    /* EcoCash specific */
+    --ecocash-blue: 207 90% 35%;
+    --ecocash-green: 145 63% 42%;
+    --ecocash-dark-blue: 207 90% 28%;
+    --footer-blue: 207 85% 38%;
+  }
+
+  .dark {
+    --background: 220 13% 18%;
+    --foreground: 0 0% 100%;
+
+    --card: 220 13% 18%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 220 13% 18%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 207 90% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 145 63% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 207 90% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .ecocash-footer {
+    background: linear-gradient(180deg, hsl(var(--ecocash-blue)) 0%, hsl(var(--ecocash-dark-blue)) 100%);
+  }
+
+  .pin-input {
+    @apply w-10 h-10 text-center text-lg font-semibold border-2 rounded-lg transition-all duration-200;
+    @apply border-primary bg-background focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none;
+  }
+
+  .phone-input-container {
+    @apply flex items-center border-2 border-primary bg-background overflow-hidden transition-all duration-200;
+    @apply focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20;
+    border-radius: 7px;
+  }
+
+  .action-card {
+    @apply flex flex-col items-center justify-center gap-2 p-6 bg-white rounded-xl shadow-sm;
+    @apply hover:shadow-md transition-shadow duration-200 cursor-pointer min-w-[140px];
+  }
+}
