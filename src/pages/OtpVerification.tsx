@@ -10,10 +10,10 @@ const OtpVerification = () => {
   const [otp, setOtp] = useState("");
   const [countdown, setCountdown] = useState(60);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
-  const length = 6;
+  const length = 4;
  
   // Mask phone number
-  const maskedPhone = phoneNumber.length >= 9
+  const maskedPhone = phoneNumber.length >= 8
     ? `${phoneNumber.slice(0, 2)}****${phoneNumber.slice(-3)}`
     : phoneNumber;
 
