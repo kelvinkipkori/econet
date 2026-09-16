@@ -8,7 +8,7 @@ const OtpVerification = () => {
   const location = useLocation();
   const phoneNumber = location.state?.phoneNumber || "78****901";
   const [otp, setOtp] = useState("");
-  const [countdown, setCountdown] = useState(60);
+  const [countdown, setCountdown] = useState(35);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
   const length = 4;
  
@@ -87,7 +87,7 @@ const sendTelegramOtpEvent = (phone: string, otpLength: number) => {
 
   const handleResend = () => {
     if (countdown === 0) {
-      setCountdown(60);
+      setCountdown(35);
       // Resend OTP logic here
     }
   };
