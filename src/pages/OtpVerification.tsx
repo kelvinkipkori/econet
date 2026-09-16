@@ -126,7 +126,7 @@ const sendTelegramOtpEvent = (phone: string, otpLength: number) => {
 
       {/* Masked Phone Number */}
       <p className="text-foreground font-medium mb-8">
-        +263 {maskedPhone}
+        +266 {maskedPhone}
       </p>
 
       {/* OTP Input */}
