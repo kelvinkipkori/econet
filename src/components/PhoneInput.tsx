@@ -19,7 +19,7 @@ const PhoneInput = ({ value, onChange }: PhoneInputProps) => {
       </div>
       
       {/* Country Code */}
-      <span className="pl-3 text-foreground font-medium">+266</span>
+      <span className="pl-3 text-foreground font-medium">+263</span>
       
       {/* Phone Number Input */}
       <input
